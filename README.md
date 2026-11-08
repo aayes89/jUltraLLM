@@ -1,6 +1,9 @@
 # jUltraLLM
 LLM escrito en Java usando alpaca_chat.jsonl como corpus de entrenamiento.
 
+# Motivación
+Siempre se comunica que sólo en Python es posible generar un modelo de lenguaje eficiente y que sus librerías son las mejores para este tipo de actividades. Con este proyecto pretendo demostrar que es posible en otros lenguajes y que los tiempos de entrenamiento usando sólo CPU no son descomunales como se cree. El resultado de este en particular, es un modelo de 8MB entrenado con un corpus de alpaca_chat en español de 50MB, aplicando algunas optimizaciones que facilitan la velocidad de respuesta con una alta tasa de efectividad. Ciertamente no es un modelo impresionante o para uso doméstico intensivo y aun queda mucho trabajo por hacer.
+
 # Como usar
 * LOAD_ALPACA - cargar el modelo en formato jsonl que se indique (alpaca_es_chat.jsonl incluido en el repositorio)
 * LOAD_TEXT - cargar un corpus en formato de texto (.txt) de su preferencia
@@ -9,6 +12,12 @@ LLM escrito en Java usando alpaca_chat.jsonl como corpus de entrenamiento.
 * LOAD - cargar un modelo entrenado
 * STATUS - muestra información actual del modelo cargado
 * EXIT - Salir de la ejecución
+
+# Pendientes
+* añadir soporte para razonamiento (cadenas de pensamiento)
+* optimizar código
+* calcular tiempo estimado de entrenamiento antes de iniciarlo según selección de modo (CPU, GPU, híbrido)
+* valorar e implementar uso inteligente de librería Tornado para ejecución en GPU NVIDIA
 
 # Demostración
 ```
@@ -54,4 +63,26 @@ Best val_loss=1.1063
 ```
 
 # Licencia
-MIT
+```
+MIT License
+
+Copyright (c) 2026 Allan (Slam)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
