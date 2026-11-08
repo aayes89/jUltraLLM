@@ -15,9 +15,10 @@ Siempre se comunica que sólo en Python es posible generar un modelo de lenguaje
 
 # Pendientes
 * añadir soporte para razonamiento (cadenas de pensamiento)
-* optimizar código
+* optimizar código para aumentar velocidad de entrenamiento sin disminuir calidad
+* corregir el soporte de UTF-8 para admitir caracteres especiales en español
 * calcular tiempo estimado de entrenamiento antes de iniciarlo según selección de modo (CPU, GPU, híbrido)
-* valorar e implementar uso inteligente de librería Tornado para ejecución en GPU NVIDIA
+* implementar uso inteligente de librería Tornado para ejecución en GPU NVIDIA sin crear cuello de botella
 
 # Demostración
 ```
